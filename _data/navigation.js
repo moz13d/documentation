@@ -137,7 +137,7 @@ module.exports = {
                 url: '/docs/xdai-price-feeds/',
               },
               {
-                title: 'Huobi Eco Chain Data Feeds',
+                title: 'HECO Chain Data Feeds',
                 url: '/docs/huobi-eco-chain-price-feeds/',
               },
               {

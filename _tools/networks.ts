@@ -65,10 +65,10 @@ export const NETWORKS = [
   },
   {
     page: "huobi-eco-chain-price-feeds",
-    title: "Huobi Eco Chain Data Feeds",
+    title: "HECO Chain Data Feeds",
     networks: [
       {
-        name: "Huobi Mainnet",
+        name: "HECO Mainnet",
         url: "https://hecoinfo.com/address/%s",
         source: "directory-heco-mainnet.json",
       },
