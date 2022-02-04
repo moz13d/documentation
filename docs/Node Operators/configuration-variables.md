@@ -42,6 +42,10 @@ Your node applies configuration settings using following hierarchy:
   - [TELEMETRY_INGRESS_LOGGING](#telemetry_ingress_logging)
   - [TELEMETRY_INGRESS_URL](#telemetry_ingress_url)
   - [TELEMETRY_INGRESS_SERVER_PUB_KEY](#telemetry_ingress_server_pub_key)
+  - [TELEMETRY_INGRESS_BUFFER_SIZE](#telemetry_ingress_buffer_size)
+  - [TELEMETRY_INGRESS_MAX_BATCH_SIZE](#telemetry_ingress_max_batch_size)
+  - [TELEMETRY_INGRESS_SEND_INTERVAL](#telemetry_ingress_send_interval)
+  - [TELEMETRY_INGRESS_USE_BATCH_SEND](#telemetry_ingress_use_batch_send)
 - [Database Settings](#database-settings)
   - [MIGRATE_DATABASE](#migrate_database)
   - [ORM_MAX_IDLE_CONNS](#orm_max_idle_conns)
@@ -249,6 +253,30 @@ The URL to connect to for sending telemetry.
 - Default: _none_
 
 The public key of the telemetry server.
+
+### TELEMETRY_INGRESS_BUFFER_SIZE
+
+- Default: `"100"`
+
+The number of telemetry messages to buffer before dropping new ones.
+
+### TELEMETRY_INGRESS_MAX_BATCH_SIZE
+
+- Default: `"50"`
+
+The maximum number of messages to batch into one telemetry request.
+
+### TELEMETRY_INGRESS_SEND_INTERVAL
+
+- Default: `"500ms"`
+
+The interval on which batched telemetry is sent to the ingress server.
+
+### TELEMETRY_INGRESS_USE_BATCH_SEND
+
+- Default: `"true"`
+
+Toggles sending telemetry to the ingress server using the batch client.
 
 ## Database Settings
 
