@@ -443,32 +443,32 @@ Setting it lower will tend to set lower gas prices.
 
 - Default: `"false"`
 
-Set to true to enable JSON logging. Otherwise will log in a human-friendly console format.
+Set to `true` to enable JSON logging. Otherwise the log is in a human-friendly console format.
 
 ### LOG_LEVEL
 
 - Default: `"info"`
 
-The `LOG_LEVEL` environment variable determines both what is printed on the screen and what is written to the logfile, located at `$ROOT/log.jsonl`.
+The `LOG_LEVEL` environment variable determines both what is printed on the screen and what is written to the logfile, which is located at `$ROOT/log.jsonl`.
 
 The available options are:
-- "debug"
-- "info"
-- "warn"
-- "error"
-- "panic"
+- `debug`
+- `info`
+- `warn`
+- `error`
+- `panic`
 
 ### LOG_SQL
 
 - Default: `"false"`
 
-Tells Chainlink to log all SQL statements made using the default logger.
+Tells the node to log all SQL statements made using the default logger.
 
 ### LOG_SQL_MIGRATIONS
 
 - Default: `"true"`
 
-Tells Chainlink to log all SQL migrations made using the default logger.
+Tells the node to log all SQL migrations made using the default logger.
 
 ### LOG_TO_DISK
 
@@ -480,7 +480,7 @@ Enables or disables the node writing to the `$ROOT/log.jsonl` file.
 
 The Chainlink node is equipped with an internal "nurse" service that can perform automatic `pprof` profiling when the certain resource thresholds are exceeded (currently, memory and goroutine count). These profiles are saved to disk to facilitate fine-grained debugging of performance-related issues. Generally speaking, if you notice that your node has begun to accumulate profiles, you should forward them to the Chainlink team.
 
-**Adventurous node operators who are interested in understanding these profiles are encouraged to read [this guide](https://jvns.ca/blog/2017/09/24/profiling-go-with-pprof/).**
+**If you are a node operator and you need to understand these profiles, read the [Profiling Go programs with pprof](https://jvns.ca/blog/2017/09/24/profiling-go-with-pprof/) guide.**
 
 ### AUTO_PPROF_ENABLED
 
@@ -886,7 +886,7 @@ The default timeout for HTTP requests.
 `42m30s`
 
 > ⚠️ NOTE
-> Some env vars require a file size. A file size string is an unsigned integer (123) or float (12.3) followed by a unit suffix. Valid file size units are "b", "kb", "mb", "gb", and "tb". If the unit is omitted, it is assumed to be "b" (bytes). Capitalization does not matter. Some examples:
+> Some configuration variables require a file size. A file size string is an unsigned integer (123) or a float (12.3) followed by a unit suffix. Valid file size units are "b", "kb", "mb", "gb", and "tb". If the unit is omitted, it is assumed to be "b" (bytes). Capitalization does not matter. Some examples:
 
 `123gb`
 `1.2TB`
